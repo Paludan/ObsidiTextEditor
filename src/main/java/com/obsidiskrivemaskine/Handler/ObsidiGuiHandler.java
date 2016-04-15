@@ -1,6 +1,6 @@
 package com.obsidiskrivemaskine.Handler;
 
-import com.obsidiskrivemaskine.GUI.ObidiGUIScreen;
+import com.obsidiskrivemaskine.GUI.ObsidiGUIScreen;
 import com.obsidiskrivemaskine.ObsidiSkriveMaskineMod;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -20,7 +20,7 @@ public class ObsidiGuiHandler implements IGuiHandler
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         if(ID == ObsidiSkriveMaskineMod.kurtguiid) {
-            return new ObidiGUIScreen();
+            return new ObsidiGUIScreen();
         }
 
         return null;

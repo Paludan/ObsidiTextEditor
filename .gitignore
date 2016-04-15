@@ -1,0 +1,46 @@
+#gradle
+.gradle
+gradle.*
+build
+build.gradle
+gradle-app.settinggradle/
+gradlew
+gradlew.bat
+gradle/
+
+# GMCP plugin
+/minecraft
+
+Fisk/
+build/
+run/
+classes/
+
+run/usercache.json
+
+#forge
+CREDITS-fml.txt
+LICENSE-fml.txt
+Minecraft*.txt
+README.txt
+forge-*-changelog.txt
+
+#Paulscode
+Paulscode *.txt
+
+# eclipse
+.settings
+.metadata
+.classpath
+.project
+bin
+
+# intellij
+out
+*.idea
+*.iml
+
+/run
+java_pid*.hprof
+
+/repo/
