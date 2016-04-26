@@ -1,9 +1,6 @@
 package com.obsidiskrivemaskine.GUI;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.reflect.ClassPath;
-import net.minecraft.block.material.Material;
-import net.minecraft.world.World;
+import com.obsidiskrivemaskine.Test;
 
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
@@ -13,20 +10,19 @@ import java.lang.reflect.Method;
  * Created by esben on 14/04/16.
  */
 public class Compiler {
-    public void inputTask() {
-        String fileToCompile = "DynamicClass.java";
-        //String filePath = "/home/esben/Desktop/Minecraft";
+    public Test outputClass = new Test();
+    public void inputTask(String fileToCompile) {
+        //String fileToCompile = "DynamicClass.java";
 
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 
         int compilationResult = compiler.run(null, null, null, fileToCompile);
 
         if (compilationResult == 0) {
-            System.out.println("Compilation is successful");
+            LoadClass();
         } else {
-            System.out.println("Compilation Failed");
+            outputClass.Hej("Compilation Failed");
         }
-        LoadClass();
     }
 
 

@@ -1,6 +1,7 @@
 package com.obsidiskrivemaskine;
 
-import com.obsidiskrivemaskine.Block.KurtSkriveMaskineBlock;
+import com.obsidiskrivemaskine.GUI.CustomCow;
+import com.obsidiskrivemaskine.block.KurtSkriveMaskineBlock;
 import com.obsidiskrivemaskine.Handler.ObsidiGuiHandler;
 import com.obsidiskrivemaskine.Proxy.ObsidiServerProxy;
 import net.minecraft.block.Block;
@@ -42,6 +43,8 @@ public class ObsidiSkriveMaskineMod
     {
         registerBlocks();
         registerHandlers();
+
+        CustomCow.RegisterEntity();
     }
 
     @EventHandler

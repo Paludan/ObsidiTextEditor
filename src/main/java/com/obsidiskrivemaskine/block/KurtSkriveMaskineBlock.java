@@ -1,6 +1,7 @@
-package com.obsidiskrivemaskine.Block;
+package com.obsidiskrivemaskine.block;
 
 import com.obsidiskrivemaskine.ObsidiSkriveMaskineMod;
+import com.obsidiskrivemaskine.Test;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -16,9 +17,11 @@ import net.minecraft.world.World;
  */
 public class KurtSkriveMaskineBlock extends Block
 {
+    int i = 0;
     public KurtSkriveMaskineBlock()
     {
         super(Material.rock);
+
     }
 
     @Override
@@ -26,6 +29,7 @@ public class KurtSkriveMaskineBlock extends Block
         float f = 0.125F;
         return new AxisAlignedBB((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), (double)(pos.getX() + 1), (double)((float)(pos.getY() + 1) - f), (double)(pos.getZ() + 1));
     }
+
 
     @Override
     public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) {
@@ -36,6 +40,7 @@ public class KurtSkriveMaskineBlock extends Block
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
         player.openGui(ObsidiSkriveMaskineMod.INSTANCE, ObsidiSkriveMaskineMod.kurtguiid, world, pos.getX(), pos.getY(), pos.getZ());
+        Test.hack(world, player);
         return super.onBlockActivated(world, pos, state, player, side, hitX, hitY, hitZ);
     }
 }
